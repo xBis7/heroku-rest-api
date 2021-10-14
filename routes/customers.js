@@ -85,10 +85,7 @@ router.delete('/', async(req, res) => {
     try{
 
         Customer.deleteMany({}, function(err){
-            if(err){
-                throw err;
-            }
-            else{
+            if(!err){
                 res.json({ message: 'Collection deleted' });
             }
         });
